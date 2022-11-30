@@ -2,6 +2,7 @@ $(function () {
   $(".loading").hide();
 
   $(".play").click(function () {
+    // openFullscreen();
     $(this).addClass("hide");
     $(".quotes").addClass("hide");
     $(".quotes-author").addClass("hide");
@@ -12,6 +13,7 @@ $(function () {
 
     setTimeout(() => {
       $(".rabbit-lyrics").removeClass("hide");
+      $(".rabbit-lyrics").addClass("unhide");
     }, 2000);
   });
 

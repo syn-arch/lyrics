@@ -29,12 +29,10 @@ function visualizer() {
 
   function renderFrame() {
     requestAnimationFrame(renderFrame);
-
     x = 0;
-
     analyser.getByteFrequencyData(dataArray);
 
-    ctx.fillStyle = "rgba(255, 255, 255, 0)";
+    ctx.fillStyle = "rgba(0, 0, 0, 1)";
     ctx.fillRect(0, 0, WIDTH, HEIGHT);
 
     for (var i = 0; i < bufferLength; i++) {
@@ -44,7 +42,7 @@ function visualizer() {
       var g = 250 * (i / bufferLength);
       var b = 50;
 
-      ctx.fillStyle = "rgb(" + r + "," + g + "," + b + ")";
+      ctx.fillStyle = "rgba(255, 255, 255, 0.3)";
       ctx.fillRect(x, HEIGHT - barHeight, barWidth, barHeight);
 
       x += barWidth + 1;
