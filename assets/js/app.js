@@ -7,7 +7,7 @@ $(function () {
     $(".quotes-author").addClass("hide");
 
     setTimeout(() => {
-      $("#audio-1")[0].play();
+      visualizer();
     }, 1000);
 
     setTimeout(() => {
